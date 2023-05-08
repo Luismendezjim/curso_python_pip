@@ -1,0 +1,24 @@
+def Calculadora(operador, Valor1, Valor2):
+    match operador:
+        case '+':
+            resultado=Valor1 + Valor2
+            print("La Suma de ",Valor1," y ",Valor2)
+        case '-':
+            resultado=Valor1 - Valor2
+            print("La Resta de ",Valor1, " menos ",Valor2)
+        case '*':
+            resultado=Valor1 * Valor2
+        case '/':
+            if Valor2 == 0 :
+                print("La division por cero no esta definida")
+                resultado=0
+            else:
+                resultado =Valor1 / Valor2
+        case _:
+            print("Operador no Valido")
+    print("EL RESULTADO ES: ",resultado)
+
+numero1 = int(input("Escribe el primer numero"))
+numero2 = int(input("Escribe el segundo numero"))
+operacion=input("Escribe el operador de la operacion (+, -, *, /")
+Calculadora("+",numero1,numero2)
